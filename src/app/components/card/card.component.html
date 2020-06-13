@@ -1,0 +1,14 @@
+<div class="card">
+  <h3>{{ car.name }}</h3>
+  <h6>{{ car.name }} was made in the year {{ car.details }}</h6>
+  <div>Car Manufacturer: {{ car.category }}</div>
+  Number of cars for sale: {{ car.quantity }}
+  <div style="display: flex; flex-direction: row;">
+    <button *ngIf="car.count > 0" (click)="reduceFromCart(car)">-</button>
+
+    <span class="mx-1"> {{ car.count }} </span>
+    <button *ngIf="car.count < car.quantity" (click)="addToCart(car)">
+      +
+    </button>
+  </div>
+</div>

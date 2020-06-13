@@ -1,0 +1,11 @@
+<div class="content" role="main">
+  <h2>Cart</h2>
+  <div class="card-container" *ngIf="cart.length > 0; else emptyCart">
+    <div *ngFor="let car of cart">
+      <app-card [car]="car"></app-card>
+    </div>
+  </div>
+  <ng-template #emptyCart>
+    <h1>Please add items to the cart</h1>
+  </ng-template>
+</div>
