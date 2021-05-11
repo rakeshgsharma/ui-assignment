@@ -10,7 +10,6 @@ export class HomeComponent {
   carDetails = [];
   constructor(public appStore: Store<{ globalState }>) {
     this.appStore.select('globalState').subscribe((data) => {
-      console.log('data', data);
       this.carDetails = data.cars;
     });
   }

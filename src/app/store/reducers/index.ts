@@ -46,7 +46,7 @@ export default function (state = initialState, action: AllActions.All) {
       };
     }
     case AllActions.FILTER: {
-      const cars = state.cars.filter((car) => car.category === action.payload);
+      const cars = data.filter((car) => car.category === action.payload);
       return {
         ...state,
         cars,
